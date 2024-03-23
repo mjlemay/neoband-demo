@@ -6,9 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NEOBAND ACCESS REQUIRED</title>
     <style>
+         /*! This code unifies basic styles across browsers. Do not remove */
+        /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+        html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+        /*! These styles are for page formatting. Change at your own risk */
         .screen {
-            display:none;
+            display:block;
         }
+        /* Change these colors to customize the theme */
+        :root {
+        --background-color: #6d1531;
+        --text-color: #faf0e6;
+        --primary-color:#41ffe3;
+        --secondary-color:rgba(0, 213, 255, 0.4);
+        --tertiary-color:rgba(235, 4, 96, 0.5);
+        --bg-grid-color:#E02A64;
+        --bg-vignette-color-1:rgba(88, 4, 70, 0);
+        --bg-vignette-color-2:rgba(88, 4, 70, 1); 
+        }
+    
+        /* Background Design. Change at your own risk */
+        body,html{margin:0;height:100%;color:var(--text-color);overflow:auto;min-height:100vh;max-height:100vh;min-width:100vw;font-family:Roboto,sans-serif;background-color:var(--background-color);background-image:radial-gradient(var(--bg-vignette-color-1),var(--bg-vignette-color-2)),linear-gradient(rgba(93,28,149,.8) 1px,transparent 0),linear-gradient(var(--bg-grid-color) 1px,transparent 0),linear-gradient(90deg,var(--bg-grid-color) 1px,transparent 0),linear-gradient(90deg,var(--bg-grid-color) 1px,transparent 0),linear-gradient(transparent 3px,var(--background-color) 0,var(--background-color) 94px,transparent 0),linear-gradient(90deg,var(--bg-grid-color) 3px,transparent 0,transparent 94px,var(--bg-grid-color) 0);background-size:100vw,100vh,24px 24px,96px 96px,24px 24px,96px 96px,96px 96px,96px 96px}
+        h1,h2,h3,h5,h6{font-size:3vh;line-height:3.25vh;font-family:Orbitron,Roboto,sans-serif;color:var(--primary-color);padding:.25vh 2vh;filter:drop-shadow(0px 0px 6px var(--primary-color))}h1{font-size:5vh;line-height:5vh}p{padding:0 2vh .25vh;font-size:1.75vh;line-height:2.25vh}a{color:var(--secondary-color)}ul{list-style-type:square;margin-left:4vh}li{margin:1vh}em{font-style:italic;padding:0 .5vh}article{padding:2vh;margin:1vh auto;max-width:1024px;background-color:var(--tertiary-color);background:0 0}.primary-mixin{padding:4vh;margin:0 0 2vh;--aug-tr:25px;--aug-b-extend1:50%;--aug-border-all:3px;--aug-border-bg:radial-gradient(var(--text-color), var(--primary-color)) 100% 100%/100% 100%;--aug-inlay-all:4px;--aug-inlay-bg:radial-gradient(ellipse at top, var(--primary-color), transparent) 50% 50%/100% 100%;--aug-inlay-opacity:0.5}.secondary-mixin{padding:4vh;margin:0 0 2vh;--aug-tr:25px;--aug-b-extend1:50%;--aug-border-all:3px;--aug-border-bg:radial-gradient(var(--primary-color), var(--secondary-color)) 100% 100%/100% 100%;--aug-inlay-all:4px;--aug-inlay-bg:radial-gradient(ellipse at top, var(--secondary-color), transparent) 50% 50%/100% 100%;--aug-inlay-opacity:0.5}
+        .screen {
+            border-radius: 5px;
+            padding:4vh;
+            margin:0 0 2vh;
+            background:radial-gradient(var(--secondary-color), var(--tertiary-color)) 100% 100%/100% 100%;
+         }
     </style>
   </head>
   <body>
