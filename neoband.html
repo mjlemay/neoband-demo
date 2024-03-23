@@ -9,7 +9,7 @@
          /*! This code unifies basic styles across browsers. Do not remove */
         /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
         html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
-        /* Change these colors to customize the theme */
+        /* Change these colors to customize the theme 😊  */
         :root {
         --background-color: #6d1531;
         --text-color: #faf0e6;
@@ -77,19 +77,29 @@
             <h1>ACCESS APPROVED</h1>
             <p>Neotropolis began as an independent (and mostly forgotten) trading outpost in a less-trafficked corner of the galaxy.</p>
             <p>That is, until the discovery of PROMETHIUM. This extremely rare and valuable element exists in trace amounts within the planet’s soil and atmosphere. </p>
+            <!-- / END OF CONTENT -->
+        </div>
+        <div id="loadScreen" class="screen hide">
+            <h1>INVALID ID</h1>
+            <p>Please use a Neoband or a valid RFID.</p>
         </div>
     </article>
 	<script>
         /* This is the javascript to run the rfid reader
          It assumes the reader is passing the numbers like a keyboard key press.
         */
+
+        /* Change values here to desired 😊 */
+        var LOAD_TIME = 0.20; // minutes
+        var CONTENT_TIME = 3; // minutes
+        var ID_LENGTH = 10; // character length
+
+        /* Functions Below run basic app. Change at your own risk */
         var slides = document.querySelectorAll('.screen');
         var rfidInput = '';
         var rfidString = '';
 
-        var isNumber = (str) => {
-            return /^\d+$/.test(str);
-        }
+        var isNumber = (str) => { return /^\d+$/.test(str);}
 
         var showScreen = (number) => {
             for (let index = 0; index < slides.length; index++) {
@@ -111,16 +121,24 @@
         var handleKeypress = (event) => {
             var key = event.key;
             var char = event.keycode;
+            var loadTime = Math.floor(LOAD_TIME * 60000);
+            var contentTime = loadTime + Math.floor(CONTENT_TIME * 60000);
+
             if (isNumber(key)) {
                 rfidInput = rfidInput + key;
             }
-            if (key === 'Enter' || char === 13 || rfidInput.length == 10) {
-                rfidString = rfidInput;
-                rfidInput = '';
+            if (rfidInput.length == ID_LENGTH) {
+                rfidString = rfidInput; //sets value to form
+                rfidInput = ''; //resets form
                  // console.log('rfidString', rfidString); // uncomment to debug
                  showScreen(1);
-                 timeoutToScreen(2, 3000);
-                 timeoutToScreen(0, 13000);
+                 timeoutToScreen(2, loadTime);
+                 timeoutToScreen(0, contentTime);
+            }
+            if(key === 'Enter' || char === 13) {
+                showScreen(3);
+                timeoutToScreen(0, loadTime);
+                rfidInput = ''; //resets form
             }
         }
 
