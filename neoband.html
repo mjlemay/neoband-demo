@@ -9,10 +9,6 @@
          /*! This code unifies basic styles across browsers. Do not remove */
         /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
         html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
-        /*! These styles are for page formatting. Change at your own risk */
-        .screen {
-            display:block;
-        }
         /* Change these colors to customize the theme */
         :root {
         --background-color: #6d1531;
@@ -27,37 +23,18 @@
     
         /* Background Design. Change at your own risk */
         body,html{margin:0;height:100%;color:var(--text-color);overflow:auto;min-height:100vh;max-height:100vh;min-width:100vw;font-family:Roboto,sans-serif;background-color:var(--background-color);background-image:radial-gradient(var(--bg-vignette-color-1),var(--bg-vignette-color-2)),linear-gradient(rgba(93,28,149,.8) 1px,transparent 0),linear-gradient(var(--bg-grid-color) 1px,transparent 0),linear-gradient(90deg,var(--bg-grid-color) 1px,transparent 0),linear-gradient(90deg,var(--bg-grid-color) 1px,transparent 0),linear-gradient(transparent 3px,var(--background-color) 0,var(--background-color) 94px,transparent 0),linear-gradient(90deg,var(--bg-grid-color) 3px,transparent 0,transparent 94px,var(--bg-grid-color) 0);background-size:100vw,100vh,24px 24px,96px 96px,24px 24px,96px 96px,96px 96px,96px 96px}
-        article{display:flex;align-items:center;justify-content:center; min-height: 96vh; max-height: 96vh; overflow-y: hidden;}
-        h1,h2,h3,h5,h6{
-            font-size:3vh;
-            text-align:center;
-            line-height:3.25vh;
-            font-family:Orbitron,Roboto,sans-serif;
-            color:var(--primary-color);
-            padding:.25vh 2vh;
-            filter:drop-shadow(0px 0px 6px var(--primary-color))}
-            h1{font-size:5vh;line-height:5vh}p{padding:0 2vh .25vh;font-size:1.75vh;line-height:2.25vh}a{color:var(--secondary-color)}ul{list-style-type:square;margin-left:4vh}li{margin:1vh}em{font-style:italic;padding:0 .5vh}article{padding:2vh;margin:1vh auto;max-width:1024px;background-color:var(--tertiary-color);background:0 0}.primary-mixin{padding:4vh;margin:0 0 2vh;--aug-tr:25px;--aug-b-extend1:50%;--aug-border-all:3px;--aug-border-bg:radial-gradient(var(--text-color), var(--primary-color)) 100% 100%/100% 100%;}
-        .screen {
-            border-radius: 5px;
-            padding:4vh;
-            margin:0 0 2vh;
-            background:radial-gradient(var(--secondary-color), var(--tertiary-color)) 100% 100%/100% 100%;
-         }
-         .hide {
-            display: none;
-         }
-         #RFID {
-            padding: 2.5%;
-            fill:var(--bg-grid-color);
-            filter:drop-shadow(0px 0px 3px var(--bg-vignette-color-2));
-         }
-         .iconContainer {
-            max-width: 95%;
-            margin: 2.5%;
-            background:radial-gradient(#fff, rgba(255, 255,255, .5)) 100% 100%/100% 100%;
-            border-radius: 15px;
-            filter:drop-shadow(0px 0px 3px var(--bg-vignette-color-2));
-         }
+        .loader{margin:100px auto;font-size:25px;width:1em;height:1em;border-radius:50%;position:relative;text-indent:-9999em;-webkit-animation:load5 1.1s infinite ease;animation:load5 1.1s infinite ease;-webkit-transform:translateZ(0);-ms-transform:translateZ(0);transform:translateZ(0)}@-webkit-keyframes load5{0%,100%{box-shadow:0 -2.6em 0 0 #97b0b2, 1.8em -1.8em 0 0 rgba(151, 176, 178, 0.2), 2.5em 0 0 0 rgba(151, 176, 178, 0.2), 1.75em 1.75em 0 0 rgba(151, 176, 178, 0.2), 0 2.5em 0 0 rgba(151, 176, 178, 0.2), -1.8em 1.8em 0 0 rgba(151, 176, 178, 0.2), -2.6em 0 0 0 rgba(151, 176, 178, 0.5), -1.8em -1.8em 0 0 rgba(151, 176, 178, 0.7)}12.5%{box-shadow:0 -2.6em 0 0 rgba(151, 176, 178, 0.7), 1.8em -1.8em 0 0 #97b0b2, 2.5em 0 0 0 rgba(151, 176, 178, 0.2), 1.75em 1.75em 0 0 rgba(151, 176, 178, 0.2), 0 2.5em 0 0 rgba(151, 176, 178, 0.2), -1.8em 1.8em 0 0 rgba(151, 176, 178, 0.2), -2.6em 0 0 0 rgba(151, 176, 178, 0.2), -1.8em -1.8em 0 0 rgba(151, 176, 178, 0.5)}25%{box-shadow:0 -2.6em 0 0 rgba(151, 176, 178, 0.5), 1.8em -1.8em 0 0 rgba(151, 176, 178, 0.7), 2.5em 0 0 0 #97b0b2, 1.75em 1.75em 0 0 rgba(151, 176, 178, 0.2), 0 2.5em 0 0 rgba(151, 176, 178, 0.2), -1.8em 1.8em 0 0 rgba(151, 176, 178, 0.2), -2.6em 0 0 0 rgba(151, 176, 178, 0.2), -1.8em -1.8em 0 0 rgba(151, 176, 178, 0.2)}37.5%{box-shadow:0 -2.6em 0 0 rgba(151, 176, 178, 0.2), 1.8em -1.8em 0 0 rgba(151, 176, 178, 0.5), 2.5em 0 0 0 rgba(151, 176, 178, 0.7), 1.75em 1.75em 0 0 #97b0b2, 0 2.5em 0 0 rgba(151, 176, 178, 0.2), -1.8em 1.8em 0 0 rgba(151, 176, 178, 0.2), -2.6em 0 0 0 rgba(151, 176, 178, 0.2), -1.8em -1.8em 0 0 rgba(151, 176, 178, 0.2)}50%{box-shadow:0 -2.6em 0 0 rgba(151, 176, 178, 0.2), 1.8em -1.8em 0 0 rgba(151, 176, 178, 0.2), 2.5em 0 0 0 rgba(151, 176, 178, 0.5), 1.75em 1.75em 0 0 rgba(151, 176, 178, 0.7), 0 2.5em 0 0 #97b0b2, -1.8em 1.8em 0 0 rgba(151, 176, 178, 0.2), -2.6em 0 0 0 rgba(151, 176, 178, 0.2), -1.8em -1.8em 0 0 rgba(151, 176, 178, 0.2)}62.5%{box-shadow:0 -2.6em 0 0 rgba(151, 176, 178, 0.2), 1.8em -1.8em 0 0 rgba(151, 176, 178, 0.2), 2.5em 0 0 0 rgba(151, 176, 178, 0.2), 1.75em 1.75em 0 0 rgba(151, 176, 178, 0.5), 0 2.5em 0 0 rgba(151, 176, 178, 0.7), -1.8em 1.8em 0 0 #97b0b2, -2.6em 0 0 0 rgba(151, 176, 178, 0.2), -1.8em -1.8em 0 0 rgba(151, 176, 178, 0.2)}75%{box-shadow:0 -2.6em 0 0 rgba(151, 176, 178, 0.2), 1.8em -1.8em 0 0 rgba(151, 176, 178, 0.2), 2.5em 0 0 0 rgba(151, 176, 178, 0.2), 1.75em 1.75em 0 0 rgba(151, 176, 178, 0.2), 0 2.5em 0 0 rgba(151, 176, 178, 0.5), -1.8em 1.8em 0 0 rgba(151, 176, 178, 0.7), -2.6em 0 0 0 #97b0b2, -1.8em -1.8em 0 0 rgba(151, 176, 178, 0.2)}87.5%{box-shadow:0 -2.6em 0 0 rgba(151, 176, 178, 0.2), 1.8em -1.8em 0 0 rgba(151, 176, 178, 0.2), 2.5em 0 0 0 rgba(151, 176, 178, 0.2), 1.75em 1.75em 0 0 rgba(151, 176, 178, 0.2), 0 2.5em 0 0 rgba(151, 176, 178, 0.2), -1.8em 1.8em 0 0 rgba(151, 176, 178, 0.5), -2.6em 0 0 0 rgba(151, 176, 178, 0.7), -1.8em -1.8em 0 0 #97b0b2}}@keyframes load5{0%,100%{box-shadow:0 -2.6em 0 0 #97b0b2, 1.8em -1.8em 0 0 rgba(151, 176, 178, 0.2), 2.5em 0 0 0 rgba(151, 176, 178, 0.2), 1.75em 1.75em 0 0 rgba(151, 176, 178, 0.2), 0 2.5em 0 0 rgba(151, 176, 178, 0.2), -1.8em 1.8em 0 0 rgba(151, 176, 178, 0.2), -2.6em 0 0 0 rgba(151, 176, 178, 0.5), -1.8em -1.8em 0 0 rgba(151, 176, 178, 0.7)}12.5%{box-shadow:0 -2.6em 0 0 rgba(151, 176, 178, 0.7), 1.8em -1.8em 0 0 #97b0b2, 2.5em 0 0 0 rgba(151, 176, 178, 0.2), 1.75em 1.75em 0 0 rgba(151, 176, 178, 0.2), 0 2.5em 0 0 rgba(151, 176, 178, 0.2), -1.8em 1.8em 0 0 rgba(151, 176, 178, 0.2), -2.6em 0 0 0 rgba(151, 176, 178, 0.2), -1.8em -1.8em 0 0 rgba(151, 176, 178, 0.5)}25%{box-shadow:0 -2.6em 0 0 rgba(151, 176, 178, 0.5), 1.8em -1.8em 0 0 rgba(151, 176, 178, 0.7), 2.5em 0 0 0 #97b0b2, 1.75em 1.75em 0 0 rgba(151, 176, 178, 0.2), 0 2.5em 0 0 rgba(151, 176, 178, 0.2), -1.8em 1.8em 0 0 rgba(151, 176, 178, 0.2), -2.6em 0 0 0 rgba(151, 176, 178, 0.2), -1.8em -1.8em 0 0 rgba(151, 176, 178, 0.2)}37.5%{box-shadow:0 -2.6em 0 0 rgba(151, 176, 178, 0.2), 1.8em -1.8em 0 0 rgba(151, 176, 178, 0.5), 2.5em 0 0 0 rgba(151, 176, 178, 0.7), 1.75em 1.75em 0 0 #97b0b2, 0 2.5em 0 0 rgba(151, 176, 178, 0.2), -1.8em 1.8em 0 0 rgba(151, 176, 178, 0.2), -2.6em 0 0 0 rgba(151, 176, 178, 0.2), -1.8em -1.8em 0 0 rgba(151, 176, 178, 0.2)}50%{box-shadow:0 -2.6em 0 0 rgba(151, 176, 178, 0.2), 1.8em -1.8em 0 0 rgba(151, 176, 178, 0.2), 2.5em 0 0 0 rgba(151, 176, 178, 0.5), 1.75em 1.75em 0 0 rgba(151, 176, 178, 0.7), 0 2.5em 0 0 #97b0b2, -1.8em 1.8em 0 0 rgba(151, 176, 178, 0.2), -2.6em 0 0 0 rgba(151, 176, 178, 0.2), -1.8em -1.8em 0 0 rgba(151, 176, 178, 0.2)}62.5%{box-shadow:0 -2.6em 0 0 rgba(151, 176, 178, 0.2), 1.8em -1.8em 0 0 rgba(151, 176, 178, 0.2), 2.5em 0 0 0 rgba(151, 176, 178, 0.2), 1.75em 1.75em 0 0 rgba(151, 176, 178, 0.5), 0 2.5em 0 0 rgba(151, 176, 178, 0.7), -1.8em 1.8em 0 0 #97b0b2, -2.6em 0 0 0 rgba(151, 176, 178, 0.2), -1.8em -1.8em 0 0 rgba(151, 176, 178, 0.2)}75%{box-shadow:0 -2.6em 0 0 rgba(151, 176, 178, 0.2), 1.8em -1.8em 0 0 rgba(151, 176, 178, 0.2), 2.5em 0 0 0 rgba(151, 176, 178, 0.2), 1.75em 1.75em 0 0 rgba(151, 176, 178, 0.2), 0 2.5em 0 0 rgba(151, 176, 178, 0.5), -1.8em 1.8em 0 0 rgba(151, 176, 178, 0.7), -2.6em 0 0 0 #97b0b2, -1.8em -1.8em 0 0 rgba(151, 176, 178, 0.2)}87.5%{box-shadow:0 -2.6em 0 0 rgba(151, 176, 178, 0.2), 1.8em -1.8em 0 0 rgba(151, 176, 178, 0.2), 2.5em 0 0 0 rgba(151, 176, 178, 0.2), 1.75em 1.75em 0 0 rgba(151, 176, 178, 0.2), 0 2.5em 0 0 rgba(151, 176, 178, 0.2), -1.8em 1.8em 0 0 rgba(151, 176, 178, 0.5), -2.6em 0 0 0 rgba(151, 176, 178, 0.7), -1.8em -1.8em 0 0 #97b0b2}}
+        h1,h2,h3,h5,h6{font-size:3vh;text-align:center;line-height:3.25vh;font-family:Orbitron,Roboto,sans-serif;color:var(--primary-color);padding:.25vh 2vh;filter:drop-shadow(0px 0px 6px var(--primary-color))}
+        h1{font-size:5vh;line-height:5vh}
+        p{padding:0 2vh .25vh;font-size:1.75vh;line-height:2.25vh}
+        a{color:var(--secondary-color)}ul{list-style-type:square;margin-left:4vh}
+        li{margin:1vh}
+        em{font-style:italic;padding:0 .5vh}
+        article{display:flex;align-items:center;justify-content:center;min-height:96vh;max-height:96vh;overflow-y:hidden;padding:2vh;margin:1vh auto;max-width:1024px;background-color:var(--tertiary-color);background:0 0}
+        .screen{display:block;border-radius: 5px;padding:4vh;margin:0 0 2vh;background:radial-gradient(var(--secondary-color), var(--tertiary-color)) 100% 100%/100% 100%;}
+        .hide{display: none;}
+         #RFID{padding: 2.5%;fill:var(--bg-grid-color);filter:drop-shadow(0px 0px 3px var(--bg-vignette-color-2));}
+         .iconContainer {max-width: 95%;margin: 2.5%;background:radial-gradient(#fff, rgba(255, 255,255, .5)) 100% 100%/100% 100%;border-radius: 15px;filter:drop-shadow(0px 0px 3px var(--bg-vignette-color-2));}
     </style>
   </head>
   <body>
@@ -93,15 +70,19 @@
         </div>
         <div id="loadScreen" class="screen hide">
             <h1>NEOBAND DETECTED</h1>
-
+            <div class="loader"></div>
         </div>
         <div id="contentScreen" class="screen hide">
+            <!-- CHANGE CONTENT HERE! 😊 -->
             <h1>ACCESS APPROVED</h1>
             <p>Neotropolis began as an independent (and mostly forgotten) trading outpost in a less-trafficked corner of the galaxy.</p>
             <p>That is, until the discovery of PROMETHIUM. This extremely rare and valuable element exists in trace amounts within the planet’s soil and atmosphere. </p>
         </div>
     </article>
 	<script>
+        /* This is the javascript to run the rfid reader
+         It assumes the reader is passing the numbers like a keyboard key press.
+        */
         var slides = document.querySelectorAll('.screen');
         var rfidInput = '';
         var rfidString = '';
@@ -111,7 +92,6 @@
         }
 
         var showScreen = (number) => {
-            console.log('slides', slides);
             for (let index = 0; index < slides.length; index++) {
                 if (index == number) {
                     slides[index].classList.remove("hide");
@@ -120,6 +100,12 @@
                 }
                 
             }
+        }
+        
+        var timeoutToScreen = (number, timeout) => {
+            setTimeout(() => {
+                showScreen(number);
+            }, timeout);
         }
 
         var handleKeypress = (event) => {
@@ -131,20 +117,16 @@
             if (key === 'Enter' || char === 13 || rfidInput.length == 10) {
                 rfidString = rfidInput;
                 rfidInput = '';
-                 console.log('rfidString', rfidString); // uncomment to debug
+                 // console.log('rfidString', rfidString); // uncomment to debug
                  showScreen(1);
+                 timeoutToScreen(2, 3000);
+                 timeoutToScreen(0, 13000);
             }
-        }
-
-        var init = () => {
-            console.log('hello world');
         }
 
         document.addEventListener("keypress", function(event) {
             handleKeypress(event);
         });
-
-        init();
     </script>
   </body>
 </html>
